@@ -1,7 +1,10 @@
-import './App.css'
-import LandingPage from './assets/Pages/LandingPage';
+import './assets/Styles/global.css'
+import LandingPage from './Pages/LandingPage/LandingPage';
+import Header from './Layout/Header/Header';
+
+import MoviePage from './Pages/MoviePage/MoviePage';
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from './assets/Layout/Header';
 
 /*
 The movie DATABASE:
@@ -18,13 +21,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' Component={LandingPage }/>
-        <Route path='/aa' Component={Header }/>
+        <Route path='/movie/:id' Component={MoviePage}/>
 
       </Routes>
     </BrowserRouter>
-    // <>
-    //   <Header />
-    // </>
 
   )
 }

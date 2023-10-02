@@ -1,0 +1,11 @@
+.header {
+  width: "100vw";
+  display: flex;
+  justify-content: flex-start;
+  padding: 1vh 2vw 1vh 2vw;
+}
+
+.header__logo {
+  height: 5vh;
+}
+

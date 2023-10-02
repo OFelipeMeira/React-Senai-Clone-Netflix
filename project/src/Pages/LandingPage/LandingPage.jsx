@@ -1,6 +1,6 @@
-import Header from "../Layout/Header";
-import Footer from "../Layout/Footer";
-import Movies from "../Layout/PopularMovieList";
+import Header from "../../Layout/Header/Header";
+import Footer from "../../Layout/Footer/Footer";
+import Movies from "../../Layout/PopularMovieList/PopularMovieList";
 import { useEffect } from "react";
 
 

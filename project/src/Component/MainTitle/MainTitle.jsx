@@ -1,9 +1,10 @@
 import React from 'react'
+import './MainTitleStyle.css'
 
 function MainTitle(props) {
     return (
         <>
-            <h1 >{props.titulo}</h1>
+            <h1 className='MainTitle'>{props.titulo}</h1>
         </>
     )
 }

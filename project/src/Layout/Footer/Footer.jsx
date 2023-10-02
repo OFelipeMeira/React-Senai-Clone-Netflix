@@ -1,5 +1,5 @@
 import React from 'react'
-import MainTitle from '../Component/MainTitle'
+import MainTitle from '../../Component/MainTitle/MainTitle'
 
 const Footer = () => {
     return (
