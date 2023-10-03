@@ -1,0 +1,16 @@
+.movieList-container{
+  margin: 12vh 5vw;
+}
+
+.movieList-list {
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));;
+
+  gap: 1vw  ;
+  justify-content: space-evenly;
+
+
+  background-color: var(--background-1);
+}
+

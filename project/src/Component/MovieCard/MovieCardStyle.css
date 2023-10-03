@@ -7,10 +7,12 @@
 
 .card__container:hover {
   transform: scale(1.1);
-  filter: brightness(0.6);
+
   cursor: pointer;
 }
-
+.card__container:hover img{
+  filter: brightness(0.6);
+}
 .card__container img {
   width: 100%;
 }
@@ -23,12 +25,11 @@
   transform: translate(-50%, -50%);
   z-index: 10;
   color: #ffffff;
-
-  font-size: 2.5vw;
-
+  background-color: transparent;
+  font-size: 1.5rem;
   text-shadow: 2px 2px #000000;
 }
 
-.card__container .card__title{
+.card__container:hover .card__title{
   display: flex;
 }

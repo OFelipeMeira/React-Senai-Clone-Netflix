@@ -1,3 +1,6 @@
 .MainTitle {
-  color: black;
+  color: var(--test-1);
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
 }

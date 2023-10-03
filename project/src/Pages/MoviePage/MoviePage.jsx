@@ -8,9 +8,9 @@ import MovieDetail from "../../Layout/MovieDetail/MovieDetail";
 const MoviePage = () => {
   return (
     <div className="MoviePage">
-      {/* <Header /> */}
+      <Header />
       <MovieDetail />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

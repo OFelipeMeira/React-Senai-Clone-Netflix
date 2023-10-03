@@ -16,12 +16,12 @@ eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZDNmYTBhZjdjYWM2OWQxZWQwMGQzZGFjY2UxMGI4NSIsInN
 */
 
 function App() {
-
+  
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' Component={LandingPage }/>
-        <Route path='/movie/:id' Component={MoviePage}/>
+        <Route path='/:lang/' Component={LandingPage }/>
+        <Route path='/:lang/movie/:id' Component={MoviePage}/>
 
       </Routes>
     </BrowserRouter>

@@ -1,15 +1,15 @@
 import Header from "../../Layout/Header/Header";
 import Footer from "../../Layout/Footer/Footer";
-import Movies from "../../Layout/PopularMovieList/PopularMovieList";
-import { useEffect } from "react";
-
+import MovieList from "../../Layout/MovieList/MovieList";
 
 const LandingPage = () => {
 
     return (
         <div>
             <Header />
-            <Movies />
+            <MovieList title={"Most Rated Movies"} search={"top_rated"}/>
+            <MovieList title={"Most Popular Movies"} search={"popular"}/>
+            <MovieList title={"Upcoming Movies"} search={"upcoming"}/>
             <Footer />
         </div >
     )

@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
-
+import "./MovieDetailStyles.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const MovieDetail = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
-  const { title,
-          adult,
-          release_date,
-          production_companies,
-          original_language } = data;
+  const {
+    title,
+    overview,
+    release_date,
+    production_companies,
+    genres,
+    original_language,
+    poster_path,
+    revenue,
+  } = data;
 
   useEffect(() => {
     getMovieData();
@@ -30,23 +35,66 @@ const MovieDetail = () => {
     await axios
       .request(options)
       .then(function (response) {
-        setData(response.data)
+        setData(response.data);
       })
       .catch(function (error) {
         console.error(error);
       });
   };
 
-  useEffect(()=>{
-    console.log(data)
-  },[data])
-
   return (
     <div className="MovieDetail">
       {data ? (
         <>
-          <h1>{data.title}</h1>
-          <h2>slaa2</h2>
+          <img
+            className="MovieDetail__banner"
+            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+            alt="Banner"
+          />
+
+          <div className="MovieDetail__info">
+            <h1 className="MovieDetail__title">{title}</h1>
+
+            <h1 className="MovieDetail__overview">{overview}</h1>
+
+            <h1 className="MovieDetail__release">Realese date: {release_date}</h1>
+
+            <ul >
+            <h1 className="MovieDetails__companiesLabel">Production Companies</h1>
+            {production_companies ? (
+              production_companies.map((company) => (
+                <li className="MovieDetails__list" key={company.name}>
+                  {company.name}
+                </li>
+              ))
+            ) : (
+              <></>
+            )}
+            </ul>
+
+            <ul >
+            <h1 className="MovieDetails__genres">Genres</h1>
+            {genres ? (
+              genres.map((genre) => (
+                <li className="MovieDetails__list" key={genre.id}>
+                  {genre.name}
+                </li>
+              ))
+            ) : (
+              <></>
+            )}
+            </ul>
+
+            {original_language ? (
+              <h1 className="MovieDetail__language">
+                Original Language: {original_language.toUpperCase()}
+              </h1>
+            ) : (
+              <></>
+            )}
+
+            <h1 className="MovieDetail__revenue">Revenue: <span>{revenue}</span></h1>
+          </div>
         </>
       ) : (
         <></>

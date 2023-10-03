@@ -1,11 +1,28 @@
 .header {
-  width: "100vw";
+  width: 100vw;
+  height: 10vh;
+  background: rgb(20, 20, 20);
+  background: linear-gradient(
+    180deg,
+    var(--background-1) 0%,
+    var(--background-1) 60%,
+    rgba(0, 212, 255, 0) 100%
+  );
+
   display: flex;
   justify-content: flex-start;
-  padding: 1vh 2vw 1vh 2vw;
+  padding: 1vh 2vw 0vh 2vw;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+}
+
+.header > a {
+  background-color: transparent;
 }
 
 .header__logo {
   height: 5vh;
+  margin: 2vh 0vw;
+  background-color: transparent;
 }
-
