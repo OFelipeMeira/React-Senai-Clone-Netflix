@@ -20,8 +20,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/:lang/' Component={LandingPage }/>
-        <Route path='/:lang/movie/:id' Component={MoviePage}/>
+        <Route path='/' Component={LandingPage }/>
+        <Route path='/movie/:id' Component={MoviePage}/>
 
       </Routes>
     </BrowserRouter>

@@ -5,24 +5,16 @@
   transition: all, 0.2s;
 }
 
-.card__container:hover {
-  transform: scale(1.1);
-
-  cursor: pointer;
-}
-.card__container:hover img{
-  filter: brightness(0.6);
-}
-.card__container img {
+.card__img {
   width: 100%;
 }
 
 .card__title {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: scale(0) translate(-50%, -50%);
   z-index: 10;
   color: #ffffff;
   background-color: transparent;
@@ -30,6 +22,19 @@
   text-shadow: 2px 2px #000000;
 }
 
+.card__container:hover {
+  transition: all 0.2s linear .3s;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 .card__container:hover .card__title{
-  display: flex;
+  transition: 0.1s .3s;
+  transform: scale(1)  translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+.card__container:hover .card__img{
+  transition: all 0.2s linear .3s;
+  filter: brightness(0.6);
 }
